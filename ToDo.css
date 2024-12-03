@@ -33,4 +33,6 @@ button {
 	background: crimson;
 	color: #fafafc;
 	border: none;
+	cursor: pointer;
+
 }
