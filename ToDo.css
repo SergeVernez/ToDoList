@@ -43,3 +43,16 @@ button {
 	margin-left: 5px;
 	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
 }
+
+ul{
+	width: 100%;
+	list-style: none;
+	padding: 0;
+}
+
+ul li {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
