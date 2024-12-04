@@ -3,6 +3,10 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fafafc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .center {
@@ -13,8 +17,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 10%;
-	margin-left: 25%;
 	border-radius: 30px;
 	border: solid 2px grey;
 	box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.47);
@@ -34,5 +36,4 @@ button {
 	color: #fafafc;
 	border: none;
 	cursor: pointer;
-
 }
