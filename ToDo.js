@@ -26,7 +26,7 @@ function addTask() {
 	//création de la variable modification
 	let modifyButton = document.createElement("button");
 
-	modifyButton.innerHTML = '<img src="./assets/Pen.png" alt="Modifier" class="modify">';
+	modifyButton.innerHTML = '<div><img src="./assets/Pen.png" alt="Modifier" class="icon"><a>Modifier</a></div>';
 
 	modifyButton.onclick = function () {
 		editTask(li);
@@ -36,7 +36,7 @@ function addTask() {
 	// création de la variable effacer
 	let deleteButton = document.createElement("button");
 
-	deleteButton.innerHTML = '<img src="./assets/Trash.png" alt="Supprimer" class="delete">';
+	deleteButton.innerHTML = '<div><img src="./assets/Trash.png" alt="Supprimer" class="icon"><a>Supprimer</a></div>';
 
 	deleteButton.onclick = function () {
 		deleteTask(li);
@@ -70,4 +70,4 @@ document.getElementById("taskInput").addEventListener("keydown", function (event
 	if (event.key === "Enter") {
 		addTask();
 	}
-}); // dans mon DOM l'element ayant l'ID "taskInput ecoute un nouvel evenement lorsque l'utilisateur appuie sur enter et if vérifie l'action sur la touche enter et addTask ajoute la tâche
+}); // dans mon DOM l'element ayant l'ID "taskInput" ecoute un nouvel evenement lorsque l'utilisateur appuie sur enter et if vérifie l'action sur la touche enter et addTask ajoute la tâche
