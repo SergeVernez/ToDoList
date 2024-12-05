@@ -28,7 +28,7 @@ function addTask() {
 
 	modifyButton.innerHTML = '<img src="./assets/Pen.png" alt="Modifier" class="modify">';
 
-	modifyButton.onclick = function() {
+	modifyButton.onclick = function () {
 		editTask(li);
 	};
 
@@ -38,30 +38,29 @@ function addTask() {
 
 	deleteButton.innerHTML = '<img src="./assets/Trash.png" alt="Supprimer" class="delete">';
 
-	deleteButton.onclick = function() {
+	deleteButton.onclick = function () {
 		deleteTask(li);
 	};
 
 	li.appendChild(modifyButton);
 	li.appendChild(deleteButton);
 
+	// --- création de la FONCTION modifier---
+	function editTask(task) {
+		let taskTextElement = task.firstChild;
+		let taskText = taskTextElement.textContent;
 
-    // --- création de la FONCTION modifier---
-    function editTask(task){
-        let taskTextElement = task.firstChild;
-        let taskText = taskTextElement.textContent;
+		let newTaskText = prompt("Modifiez vôtre tâche:", taskText);
 
-        let newTaskText = prompt('Modifiez vôtre tâche:', taskText);
+		if (newTaskText === null || newTaskText === "") {
+			return; // === : strictement égale --et-- || : ou bien
+		}
 
-        if(newTaskText === null || newTaskText === ""){
-            return; // === : strictement égale --et-- || : ou bien
-        }
+		taskTextElement.textContent = newTaskText;
+	}
 
-        taskTextElement.textContent = newTaskText;
-    }
-
-    // --- création de la fonction supprimer---
-    function deleteTask(task){
-        taskList.removeChild(task);
-    }
+	// --- création de la fonction supprimer---
+	function deleteTask(task) {
+		taskList.removeChild(task);
+	}
 }
