@@ -12,7 +12,7 @@ function addTask() {
 	// --- création de la condition if---
 	if (taskText === "") {
 		return;
-	} // si taskText est strictement égale(===) à vide alors on ne fait rien
+	} // si taskText est strictement égale(===) à vide alors on ne fait rien : si l'utilisateur n'entre rie alor on ne fait rien
 
 	// --- création de variable pour la li---
 	let li = document.createElement("li"); // pour créer l'element li (la tâche)
@@ -26,9 +26,35 @@ function addTask() {
 	//création de la variable modification
 	let modifyButton = document.createElement("button");
 
-	modifyButton.innerHTML = "";
+	modifyButton.innerHTML = '<img src="./assets/Pen" alt="Modifier">';
 
-	modifyButtononclick = function () {
+	modifyButton.onclick = function () {
 		editTask(li);
 	};
+
+	// --- création du boutton effacer---
+	// création de la variable effacer
+	let deletButton = document.createElement("button");
+
+	deleteButton.innerHTML = '<img src="./assets/Trash" alt="Supprimer">';
+
+	deleteButton.onclick = function () {
+		deleteTask(li);
+	};
+
+	li.appendChild(modifyButton);
+	li.appendChild(deleteButton);
+
+
+    // --- création de la FONCTION modifier---
+    function editTask(task){
+        let taskTextElement = task.firstChild;
+        let taskText = taskTextElement.textContent;
+
+        let newTaskText = prompt('Modifiez vôtre tâche:', taskText)
+
+        if(newTaskText === null || newTaskText === ""){
+            return;
+        }
+    }
 }
