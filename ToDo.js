@@ -22,4 +22,13 @@ function addTask() {
 	taskList.appendChild(li);
 	taskInpunt.value = ""; // Une fois la tâche saisie laisse l'input vide
 
+	//--- création du boutton modifier---
+	//création de la variable modification
+	let modifyButton = document.createElement("button");
+
+	modifyButton.innerHTML = "";
+
+	modifyButtononclick = function () {
+		editTask(li);
+	};
 }
