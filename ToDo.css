@@ -3,17 +3,23 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fafafc;
+	background-image: url(Assets/Zen.jpg);
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	font-family: Arial, Helvetica, sans-serif;
-	background: #e5e5e5;
 }
 h1 {
-	color: rgb(56, 26, 26);
+	max-width: 800px;
+	font-size: 30px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	letter-spacing: 0.3rem;
+	color: rgb(30, 133, 74);
 	margin-bottom: 20px;
+	text-shadow: 3px 3px 4px rgba(56, 55, 55, 0.334);
 }
 
 .center {
@@ -64,16 +70,14 @@ button {
 	font-weight: 600;
 	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
 }
-button :hover {
-	transform: scale(1.1);
-}
+
 button > div {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
 }
-ul {
+button ul {
 	width: 100%;
 	list-style: none;
 }
@@ -82,7 +86,7 @@ ul li {
 	color: rgb(61, 61, 61);
 	background: #f1f1f1;
 	border-radius: 15px;
-	width: 93%;
+	width: 97%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -90,6 +94,7 @@ ul li {
 	border: solid lightgrey 1px;
 	padding: 10px;
 	margin-bottom: 5px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .icon {
