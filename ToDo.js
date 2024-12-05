@@ -4,7 +4,7 @@ let taskList = document.getElementById("taskList"); //--recuperation de l'elemen
 // ---création de la fonction addTask---
 function addTask() {
 	// ---création de variable taskInpunt---
-	let taskInpunt = document.getElementById("taskInput"); // element avec l'id taskInput
+	let taskInput = document.getElementById("taskInput"); // element avec l'id taskInput
 
 	// ---création de la variable taskText---
 	let taskText = taskInpunt.value; // la variable sera egale à la valeur de taskInput (ce qui va remplir la tâche)
@@ -20,13 +20,13 @@ function addTask() {
 	li.innerHTML = taskText;
 
 	taskList.appendChild(li);
-	taskInpunt.value = ""; // Une fois la tâche saisie laisse l'input vide
+	taskInput.value = ""; // Une fois la tâche saisie laisse l'input vide
 
 	//--- création du boutton modifier---
 	//création de la variable modification
 	let modifyButton = document.createElement("button");
 
-	modifyButton.innerHTML = '<img src="./assets/Pen" alt="Modifier">';
+	modifyButton.innerHTML = '<img src="./assets/Pen.png" alt="Modifier" class="modify">';
 
 	modifyButton.onclick = function () {
 		editTask(li);
@@ -36,7 +36,7 @@ function addTask() {
 	// création de la variable effacer
 	let deletButton = document.createElement("button");
 
-	deleteButton.innerHTML = '<img src="./assets/Trash" alt="Supprimer">';
+	deleteButton.innerHTML = '<img src="./assets/Trash.png" alt="Supprimer" class="delete">';
 
 	deleteButton.onclick = function () {
 		deleteTask(li);
@@ -54,7 +54,14 @@ function addTask() {
         let newTaskText = prompt('Modifiez vôtre tâche:', taskText)
 
         if(newTaskText === null || newTaskText === ""){
-            return;
+            return; // === : strictement égale --et-- || : ou bien
         }
+
+        taskTextElement.textConten = newTaskText;
+    }
+
+    // --- création de la fonction supprimer---
+    function deleteTask(task){
+        taskList.removeChild(task);
     }
 }
