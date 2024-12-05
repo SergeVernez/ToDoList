@@ -64,3 +64,10 @@ function addTask() {
 		taskList.removeChild(task);
 	}
 }
+
+// --- Ajout de la validation avec la touche entrer---
+document.getElementById("taskInput").addEventListener("keydown", function (event) {
+	if (event.key === "Enter") {
+		addTask();
+	}
+}); // dans mon DOM l'element ayant l'ID "taskInput ecoute un nouvel evenement lorsque l'utilisateur appuie sur enter et if vérifie l'action sur la touche enter et addTask ajoute la tâche
