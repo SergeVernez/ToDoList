@@ -25,7 +25,7 @@ function addTask() {
 	//--- création du boutton modifier---
 	//création de la variable modification
 	let modifyButton = document.createElement("button");
-
+	modifyButton.classList.add("modify");
 	modifyButton.innerHTML = '<div><img src="./assets/Pen.png" alt="Modifier" class="icon"><a>Modifier</a></div>';
 
 	modifyButton.onclick = function () {
@@ -35,7 +35,7 @@ function addTask() {
 	// --- création du boutton effacer---
 	// création de la variable effacer
 	let deleteButton = document.createElement("button");
-
+	deleteButton.classList.add("delete");
 	deleteButton.innerHTML = '<div><img src="./assets/Trash.png" alt="Supprimer" class="icon"><a>Supprimer</a></div>';
 
 	deleteButton.onclick = function () {
@@ -50,7 +50,7 @@ function addTask() {
 		let taskTextElement = task.firstChild;
 		let taskText = taskTextElement.textContent;
 
-		let newTaskText = prompt("Modifiez vôtre tâche:", taskText);
+		let newTaskText = prompt("Vous vous êtes trompé, cela arrive aux meilleurs ! Modifiez votre tâche 😉:", taskText);
 
 		if (newTaskText === null || newTaskText === "") {
 			return; // === : strictement égale --et-- || : ou bien
