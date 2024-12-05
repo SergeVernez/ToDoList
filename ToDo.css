@@ -15,18 +15,6 @@ h1 {
 	color: rgb(56, 26, 26);
 	margin-bottom: 20px;
 }
-/* .center {
-	width: 50vw;
-	height: 500px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	border-radius: 30px;
-	border: solid 2px grey;
-	box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.47);
-} */
 
 .center {
 	width: 100%;
@@ -41,38 +29,35 @@ h1 {
 	margin: 0;
 }
 
-/* input {
-	width: 200px;
-	height: 25px;
-	border-radius: 10px;
-	border: none;
-	background: lightgrey;
-	padding: 10px;
-} */
 input {
-	width: 300px;
+	background: #f1f1f1;
+	width: 500px;
 	padding: 5px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 15px;
 	margin-bottom: 5px;
 	height: 50px;
 	font-style: italic;
 	font-size: 15px;
 	font-weight: 100;
-	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
+	box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.273);
+	border: solid lightgrey 1px;
+	padding: 10px;
 }
 button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	height: 60px;
-	width: 150px;
-	border-radius: 10px;
+	margin-left: 20px;
+	padding: 10px;
+	border-radius: 15px;
 	background: rgb(6, 206, 6);
 	color: #fafafc;
 	border: none;
 	cursor: pointer;
 	font-size: 18px;
 	font-weight: 600;
-	margin-left: 10px;
-	margin-bottom: 5px;
 	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
 }
 button > div {
@@ -84,19 +69,25 @@ button > div {
 ul {
 	width: 100%;
 	list-style: none;
-	padding: 0;
 }
 
 ul li {
+	color: rgb(61, 61, 61);
+	background: #f1f1f1;
+	border-radius: 15px;
 	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
+	box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.273);
+	border: solid lightgrey 1px;
+	padding: 10px;
+	margin-bottom: 5px;
 }
 
 .icon {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	margin-right: 10px;
 	color: #f1f1f1;
 }
