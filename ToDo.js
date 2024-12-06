@@ -42,8 +42,8 @@ function addTask() {
 		deleteTask(li);
 	};
 
-	li.appendChild(modifyButton);
-	li.appendChild(deleteButton);
+	li.appendChild(modifyButton); //li ajoute la li et appenChild(modifyButton ajoute le bouton modifier)
+	li.appendChild(deleteButton); //li ajoute la li et appenChild(deleteButton ajoute le bouton supprimer)
 
 	// --- création de la FONCTION modifier---
 	function editTask(task) {
