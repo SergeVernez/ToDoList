@@ -17,7 +17,7 @@ h1 {
 	font-size: 30px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	letter-spacing: 0.3rem;
-	color: rgb(30, 133, 74);
+	color: #4b5945;
 	margin-bottom: 20px;
 	text-shadow: 3px 3px 4px rgba(56, 55, 55, 0.334);
 }
@@ -65,7 +65,7 @@ button {
 	margin-left: 20px;
 	padding: 10px;
 	border-radius: 15px;
-	background: rgb(6, 206, 6);
+	background: #4b5945;
 	color: #fafafc;
 	border: none;
 	cursor: pointer;
@@ -84,6 +84,11 @@ button ul {
 	width: 100%;
 	list-style: none;
 }
+button img.icon {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
 
 ul li {
 	color: rgb(61, 61, 61);
@@ -98,22 +103,23 @@ ul li {
 	padding: 10px;
 	margin-bottom: 5px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	max-width: 800px;
+}
+.list > button > img {
+	width: 60px;
+	height: 60px;
+
 }
 
-.icon {
-	width: 40px;
-	height: 40px;
-	margin-right: 10px;
-	color: #f1f1f1;
-}
 .add {
 	width: 50px;
 	height: 50px;
 }
 .modify {
-	background: rgb(233, 233, 17);
+	background: #fcc737;
 	color: rgb(110, 0, 0);
 }
 .delete {
-	background: rgb(191, 62, 22);
+	background: #f26b0f;
+	color: rgb(61, 23, 23);c
 }
