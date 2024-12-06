@@ -26,8 +26,11 @@ h1 {
 	width: 100%;
 	max-width: 800px;
 	margin: 0;
+	overflow-y: scroll; /*pour le defilement vertical */
 }
-
+.center::-webkit-scrollbar {
+	display: none; /*masque la scroll barre du overflow-y: scroll;  /!\ Sinon apparition d'une scroll barre*/
+}
 .list {
 	display: flex;
 	justify-content: center;
