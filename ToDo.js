@@ -65,7 +65,7 @@ function addTask() {
 	}
 }
 
-// --- Ajout de la validation avec la touche entrer---
+// --- Ajout de la validation avec la touche entrée---
 document.getElementById("taskInput").addEventListener("keydown", function (event) {
 	if (event.key === "Enter") {
 		addTask();

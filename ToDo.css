@@ -14,11 +14,11 @@ body {
 }
 h1 {
 	max-width: 800px;
-	font-size: 30px;
+	font-size: 35px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	letter-spacing: 0.3rem;
 	color: #4b5945;
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 	text-shadow: 3px 3px 4px rgba(56, 55, 55, 0.334);
 }
 
@@ -104,6 +104,7 @@ ul li {
 	margin-bottom: 5px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	max-width: 800px;
+	text-wrap: wrap;
 }
 .list > button > img {
 	width: 60px;
@@ -116,9 +117,10 @@ ul li {
 }
 .modify {
 	background: #fcc737;
-	color: rgb(110, 0, 0);
+	color: #2a3335;
+	margin-left: 50px;
 }
 .delete {
 	background: #f26b0f;
-	color: rgb(61, 23, 23);
+	color: #f1f1f1;
 }
