@@ -108,7 +108,6 @@ ul li {
 .list > button > img {
 	width: 60px;
 	height: 60px;
-
 }
 
 .add {
@@ -121,5 +120,5 @@ ul li {
 }
 .delete {
 	background: #f26b0f;
-	color: rgb(61, 23, 23);c
+	color: rgb(61, 23, 23);
 }
