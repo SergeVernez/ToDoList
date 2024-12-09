@@ -133,7 +133,7 @@ ul li {
 .toDo,
 .inProgress,
 .do {
-	width: 30%;
+	width: 100%;
 	margin: 10px;
 	padding: 10px;
 	border-radius: 10px;
@@ -141,14 +141,14 @@ ul li {
 	text-align: center;
 }
 .toDo {
-	background: crimson;
-	color: aliceblue;
+	background: #ff748b;
+	color: #4b5945;
 }
 .inProgress {
-	background: yellow;
-	color: black;
+	background: #fcffc1;
+	color: #4b5945;
 }
 .do {
-	background: green;
-	color: aliceblue;
+	background: #e4f1ac;
+	color: #4b5945;
 }

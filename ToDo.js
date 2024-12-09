@@ -15,14 +15,14 @@ function addTask() {
 	// --- création de la condition if---
 	if (taskText === "") {
 		return;
-	} // si taskText est strictement égale(===) à vide alors on ne fait rien : si l'utilisateur n'entre rie alor on ne fait rien
+	} // si taskText est strictement égale(===) à vide alors on ne fait rien : si l'utilisateur n'entre rien alors on ne fait rien
 
 	// --- création de variable pour la li---
 	let li = document.createElement("li"); // pour créer l'element li (la tâche)
 
 	li.innerHTML = taskText; //le texte saisi par l'utilisateur
 
-	taskList.appendChild(li);
+	toDoList.appendChild(li);
 	taskInput.value = ""; // Une fois la tâche saisie laisse l'input vide
 
 	//--- création du boutton modifier---
@@ -45,8 +45,26 @@ function addTask() {
 		deleteTask(li);
 	};
 
+	// --- création du boutton en cours---
+	let inProgressButton = document.createElement("button");
+	inProgressButton.classList.add("inProgress");
+	inProgressButton.innerHTML = "En cours";
+	inProgressButton.onclick = function () {
+		moveToInProgress(li);
+	};
+
+	// --- création du boutton fait---
+	let doButton = document.createElement("button");
+	doButton.classList.add("do");
+	doButton.innerHTML = "fait";
+	doButton.onclick = function () {
+		moveToDo(li);
+	};
+
 	li.appendChild(modifyButton); //li ajoute la li et appenChild(modifyButton ajoute le bouton modifier)
 	li.appendChild(deleteButton); //li ajoute la li et appenChild(deleteButton ajoute le bouton supprimer)
+	li.appendChild(inProgressButton); //li ajoute la li et appenChild(deleteButton ajoute le bouton en cours)
+	li.appendChild(doButton); //li ajoute la li et appenChild(deleteButton ajoute le bouton fait)
 
 	// --- création de la FONCTION modifier---
 	function editTask(task) {
@@ -64,8 +82,8 @@ function addTask() {
 
 	// --- création de la fonction supprimer---
 	function deleteTask(task) {
-		taskList.removeChild(task);
-	}
+		task.parentNode.removeChild(task);
+	} // ---La propriété en lecture seule parentNodede l' Nodeinterface renvoie le parent du nœud spécifié dans l'arborescence DOM. Source MDN
 }
 
 // --- Ajout de la fonction de déplacement---
