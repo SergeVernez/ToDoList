@@ -1,5 +1,8 @@
 // ---création de la variable taskList---
-let taskList = document.getElementById("taskList"); //--recuperation de l'element qui possed l'ID tasklisit (liste non ordonée)
+// let taskList = document.getElementById("taskList"); //--recuperation de l'element qui possed l'ID tasklisit (liste non ordonée)code d'origine sans les sections
+let toDoList = document.getElementById("toDoList");
+let inProgressList = document.getElementById("inProgressList");
+let doList = document.getElementById("doList")
 
 // ---création de la fonction addTask---
 function addTask() {
@@ -63,6 +66,31 @@ function addTask() {
 	function deleteTask(task) {
 		taskList.removeChild(task);
 	}
+}
+
+// --- Ajout de la fonction de déplacement---
+function moveToInProgress(taskElement) {
+	// suppression des boutons pour ne pas les dupliquer
+	taskElement.querySelector(".inProgress").remove();
+	taskElement.querySelector(".do").remove();
+
+	// ajout du bouton fait
+	let doButton = document.createElement("button");
+	doButton.classList.add("do");
+	doButton.innerHTML = "fait";
+	doButton.onclick = function () {
+		moveToDo(taskElement);
+	};
+
+	taskElement.appendChild(doButton);
+	inProgressList.appendChild(taskElement);
+}
+
+function moveToDo(taskElement) {
+	// suppression du bouton fait
+	taskElement.querySelector(".do").remove();
+
+	doList.appendChild(taskElement);
 }
 
 // --- Ajout de la validation avec la touche entrée---

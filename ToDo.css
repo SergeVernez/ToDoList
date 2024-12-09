@@ -135,8 +135,20 @@ ul li {
 .do {
 	width: 30%;
 	margin: 10px;
-	background: lightgray;
 	padding: 10px;
 	border-radius: 10px;
 	box-sizing: border-box;
+	text-align: center;
+}
+.toDo {
+	background: crimson;
+	color: aliceblue;
+}
+.inProgress {
+	background: yellow;
+	color: black;
+}
+.do {
+	background: green;
+	color: aliceblue;
 }
