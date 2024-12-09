@@ -124,8 +124,18 @@ ul li {
 	background: #f26b0f;
 	color: #f1f1f1;
 }
-.container{
+.container {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+}
+.toDO,
+.inProgress,
+.do {
+	width: 30px;
+	margin: 10px;
+	background: #f9f9f9;
+	padding: 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
 }
