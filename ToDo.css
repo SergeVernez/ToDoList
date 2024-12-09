@@ -5,11 +5,12 @@ body {
 	background-color: #fafafc;
 	background-image: url(Assets/Zen.jpg);
 	background-size: cover;
+	background-attachment: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 	font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
@@ -144,7 +145,7 @@ ul li {
 	letter-spacing: 3px;
 	font-variant: small-caps;
 	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
-	}
+}
 .toDo {
 	background: #ff748b;
 	color: #4b5945;
