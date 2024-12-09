@@ -125,17 +125,18 @@ ul li {
 	color: #f1f1f1;
 }
 .container {
+	width: 750px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
-.toDO,
+.toDo,
 .inProgress,
 .do {
-	width: 30px;
+	width: 30%;
 	margin: 10px;
-	background: #f9f9f9;
+	background: lightgray;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 10px;
 	box-sizing: border-box;
 }
