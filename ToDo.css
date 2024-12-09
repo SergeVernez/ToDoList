@@ -139,6 +139,8 @@ ul li {
 	border-radius: 10px;
 	box-sizing: border-box;
 	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	letter-spacing: 3px;
 }
 .toDo {
 	background: #ff748b;
