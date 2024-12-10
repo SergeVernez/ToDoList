@@ -18,7 +18,6 @@ function addTask() {
 
 	// --- création de variable pour la li---
 	let li = document.createElement("li"); // pour créer l'element li (la tâche)
-
 	li.innerHTML = taskText; //le texte saisi par l'utilisateur
 
 	//--- création du boutton modifier---
@@ -105,6 +104,7 @@ function moveToDo(taskElement) {
 	taskElement.querySelector(".do").remove();
 	doList.appendChild(taskElement);
 }
+
 
 // --- Ajout de la validation avec la touche entrée---
 document.getElementById("taskInput").addEventListener("keydown", function (event) {
