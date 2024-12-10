@@ -140,10 +140,6 @@ ul li {
 	padding: 10px;
 	border-radius: 10px;
 	box-sizing: border-box;
-	text-align: center;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	letter-spacing: 3px;
-	font-variant: small-caps;
 	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
 }
 .toDo {
@@ -157,4 +153,10 @@ ul li {
 .do {
 	background: #e4f1ac;
 	color: #4b5945;
+}
+h2 {
+	letter-spacing: 3px;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-variant: small-caps;
 }
