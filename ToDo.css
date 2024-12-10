@@ -20,7 +20,10 @@ h1 {
 	letter-spacing: 0.3rem;
 	color: #4b5945;
 	margin-bottom: 60px;
-	text-shadow: 3px 3px 4px rgba(56, 55, 55, 0.334);
+	background: rgba(240, 248, 255, 0.426);
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 4px rgba(56, 55, 55, 0.334);
 }
 
 .center {
@@ -126,11 +129,11 @@ ul li {
 	color: #f1f1f1;
 }
 .container {
-	width: 770px;
+	width: 1000px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-left: 3%;
+	margin-left: 2%;
 }
 .toDo,
 .inProgress,
