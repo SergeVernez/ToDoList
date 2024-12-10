@@ -49,7 +49,7 @@ function addTask() {
 	// --- création du boutton fait---
 	let doButton = document.createElement("button");
 	doButton.classList.add("do");
-	doButton.innerHTML = "fait";
+	doButton.innerHTML = "Fait";
 	doButton.onclick = function () {
 		moveToDo(li);
 	};
@@ -90,7 +90,7 @@ function moveToInProgress(taskElement) {
 	// ajout du bouton fait
 	let doButton = document.createElement("button");
 	doButton.classList.add("do");
-	doButton.innerHTML = "fait";
+	doButton.innerHTML = "Fait";
 	doButton.onclick = function () {
 		moveToDo(taskElement);
 	};

@@ -20,9 +20,11 @@ h1 {
 	letter-spacing: 0.3rem;
 	color: #4b5945;
 	margin-bottom: 60px;
+	margin-top: 80px;
 	background: rgba(240, 248, 255, 0.426);
-	padding: 10px;
+	padding: 20px 300px 20px 320px;
 	border-radius: 10px;
+	margin-left: 2%;
 	box-shadow: 3px 3px 4px rgba(56, 55, 55, 0.334);
 }
 
@@ -120,13 +122,13 @@ ul li {
 	height: 50px;
 }
 .modify {
-	background: #fcc737;
-	color: #2a3335;
+	background: #ffea00f6;
+	color: #4b5945;
 	margin-left: 50px;
 }
 .delete {
-	background: #f26b0f;
-	color: #f1f1f1;
+	background: #dc1414;
+	color: #fafafa;
 }
 .container {
 	width: 1000px;
@@ -143,20 +145,23 @@ ul li {
 	padding: 10px;
 	border-radius: 10px;
 	box-sizing: border-box;
-	box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.47);
 }
 .toDo {
-	background: #ff748b;
+	background: #dad2d34c;
 	color: #4b5945;
+	border: crimson solid 1.5px;
 }
 .inProgress {
-	background: #fcffc1;
+	background: #dad2d34c;
 	color: #4b5945;
+	border: orange solid 1.5px;
 }
 .do {
-	background: #e4f1ac;
+	background: #dad2d34c;
 	color: #4b5945;
+	border: rgb(7, 161, 7) solid 1.5px;
 }
+
 h2 {
 	letter-spacing: 3px;
 	text-align: center;
