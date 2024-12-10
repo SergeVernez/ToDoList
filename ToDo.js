@@ -2,13 +2,12 @@
 // let taskList = document.getElementById("taskList"); //--recuperation de l'element qui possed l'ID tasklisit (liste non ordonée)code d'origine sans les sections
 let toDoList = document.getElementById("toDoList");
 let inProgressList = document.getElementById("inProgressList");
-let doList = document.getElementById("doList")
+let doList = document.getElementById("doList");
 
 // ---création de la fonction addTask---
 function addTask() {
 	// ---création de variable taskInpunt---
-	let taskInput = document.getElementById("taskInput"); // element avec l'id taskInput
-
+	let taskInput = document.getElementById("taskInput"); // element avec l'id taskInput.
 	// ---création de la variable taskText---
 	let taskText = taskInput.value; // la variable sera egale à la valeur de taskInput (ce qui va remplir la tâche)
 
@@ -22,15 +21,11 @@ function addTask() {
 
 	li.innerHTML = taskText; //le texte saisi par l'utilisateur
 
-	toDoList.appendChild(li);
-	taskInput.value = ""; // Une fois la tâche saisie laisse l'input vide
-
 	//--- création du boutton modifier---
 	//création de la variable modification
 	let modifyButton = document.createElement("button");
 	modifyButton.classList.add("modify");
 	modifyButton.innerHTML = '<div><img src="./assets/Pen.png" alt="Modifier" class="icon"><a>Modifier</a></div>';
-
 	modifyButton.onclick = function () {
 		editTask(li);
 	};
@@ -40,7 +35,6 @@ function addTask() {
 	let deleteButton = document.createElement("button");
 	deleteButton.classList.add("delete");
 	deleteButton.innerHTML = '<div><img src="./assets/Trash.png" alt="Supprimer" class="icon"><a>Supprimer</a></div>';
-
 	deleteButton.onclick = function () {
 		deleteTask(li);
 	};
@@ -66,25 +60,27 @@ function addTask() {
 	li.appendChild(inProgressButton); //li ajoute la li et appenChild(deleteButton ajoute le bouton en cours)
 	li.appendChild(doButton); //li ajoute la li et appenChild(deleteButton ajoute le bouton fait)
 
-	// --- création de la FONCTION modifier---
-	function editTask(task) {
-		let taskTextElement = task.firstChild;
-		let taskText = taskTextElement.textContent;
+	//--- Ajout de l'élément li à la liste à faire ---
+	toDoList.appendChild(li);
+	taskInput.value = ""; // Une fois la tâche saisie laisse l'input vide
+}
+// --- création de la FONCTION modifier---
+function editTask(task) {
+	let taskTextElement = task.firstChild;
+	let taskText = taskTextElement.textContent;
+	let newTaskText = prompt("Vous vous êtes trompé, cela arrive aux meilleurs ! Modifiez votre tâche 😉:", taskText);
 
-		let newTaskText = prompt("Vous vous êtes trompé, cela arrive aux meilleurs ! Modifiez votre tâche 😉:", taskText);
-
-		if (newTaskText === null || newTaskText === "") {
-			return; // === : strictement égale --et-- || : ou bien
-		}
-
-		taskTextElement.textContent = newTaskText;
+	if (newTaskText === null || newTaskText === "") {
+		return; // === : strictement égale --et-- || : ou bien
 	}
 
-	// --- création de la fonction supprimer---
-	function deleteTask(task) {
-		task.parentNode.removeChild(task);
-	} // ---La propriété en lecture seule parentNodede l' Nodeinterface renvoie le parent du nœud spécifié dans l'arborescence DOM. Source MDN
+	taskTextElement.textContent = newTaskText;
 }
+
+// --- création de la fonction supprimer---
+function deleteTask(task) {
+	task.parentNode.removeChild(task);
+} // ---La propriété en lecture seule parentNodede l' Nodeinterface renvoie le parent du nœud spécifié dans l'arborescence DOM. Source MDN
 
 // --- Ajout de la fonction de déplacement---
 function moveToInProgress(taskElement) {
@@ -107,7 +103,6 @@ function moveToInProgress(taskElement) {
 function moveToDo(taskElement) {
 	// suppression du bouton fait
 	taskElement.querySelector(".do").remove();
-
 	doList.appendChild(taskElement);
 }
 
